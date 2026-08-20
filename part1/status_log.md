@@ -36,7 +36,7 @@ Untracked files:
 
 #vì sao tùy chọn -a chỉ hoạt động đối với các tệp đã được theo dõi trước đó (tracked files).?
 
-    Giải thích dựa trên tài liệu: Tùy chọn -a (hoặc --all) cho phép Git tự động phát hiện, đưa các tệp có thay đổi vào vùng Staging Area và commit chúng ngay lập tức, bỏ qua bước chạy lệnh git add thủ công. Tuy nhiên, cơ chế này chỉ áp dụng cho những tệp đã được theo dõi (tracked). Đối với các tệp chưa được theo dõi (untracked) (ví dụ như tệp mới tạo hoàn toàn chưa từng được thêm vào Git), Git không quản lý chúng nên không thể tự động đưa vào vùng chờ. Do đó, tệp untracked vẫn bắt buộc phải dùng lệnh git add <file> thủ công lần đầu
+Tùy chọn -a (hoặc --all) cho phép Git tự động phát hiện, đưa các tệp có thay đổi vào vùng Staging Area và commit chúng ngay lập tức, bỏ qua bước chạy lệnh git add thủ công. Tuy nhiên, cơ chế này chỉ áp dụng cho những tệp đã được theo dõi (tracked). Đối với các tệp chưa được theo dõi (untracked) (ví dụ như tệp mới tạo hoàn toàn chưa từng được thêm vào Git), Git không quản lý chúng nên không thể tự động đưa vào vùng chờ. Do đó, tệp untracked vẫn bắt buộc phải dùng lệnh git add <file> thủ công lần đầu
 
 
 #sự khác biệt giữa fetch và pull ?
