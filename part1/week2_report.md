@@ -109,3 +109,54 @@ nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ gi
 * work-in-progress f20b449 [origin/work-in-progress: ahead 2] add text to wip
 
 
+Part D.
+1.
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git switch -c experiment
+Switched to a new branch 'experiment'
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ touch file1.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git add file1.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git commit -m "experiment commit 1"
+[experiment d052cf2] experiment commit 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 part1/file1.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ touch file2.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git add file2.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git commit -m "experiment commit 2"
+[experiment ad8c6fa] experiment commit 2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 part1/file2.txt
+
+2.
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ touch file3.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git add file3.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git commit -m "main commit"
+[main 91af5ae] main commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 part1/file3.txt
+
+3.
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git switch experiment
+Switched to branch 'experiment'
+
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git rebase main
+Current branch experiment is up to date.
+
+4.rebase lấy các commit của experiment (2 commit ở bước 1), "gỡ" chúng ra, sau đó "gắn lại" (replay) từng commit đó lên trên đầu mới nhất của master (commit ở bước 2). Kết quả là lịch sử của experiment trở thành một đường thẳng nối tiếp sau master, thay vì bị phân nhánh — commit ID của các commit trên experiment sẽ thay đổi vì chúng được tạo lại (replay) trên nền mới.
+
+5.
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 9 commits.
+  (use "git push" to publish your local commits)
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git merge experiment
+Updating 91af5ae..8b97d68
+Fast-forward
+ part1/file1.txt | 0
+ part1/file2.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 part1/file1.txt
+ create mode 100644 part1/file2.txt
