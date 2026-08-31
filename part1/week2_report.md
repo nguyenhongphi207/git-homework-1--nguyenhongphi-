@@ -95,4 +95,17 @@ nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ gi
 Switched to branch 'work-in-progress'
 Your branch is up to date with 'origin/work-in-progress'.
 
+Part c
+1.nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git add wip.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git commit -m "add text to wip"
+[work-in-progress f20b449] add text to wip
+ 1 file changed, 1 insertion(+)
+
+2.
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git branch -vv
+  huyduong         f67360b [origin/huyduong] rename
+  main             ab4798c [origin/main: ahead 8] Merge branch 'week2' into week2b
+  users            823c52a [origin/users] fckhuyduong
+* work-in-progress f20b449 [origin/work-in-progress: ahead 2] add text to wip
+
 
