@@ -31,3 +31,25 @@ Your branch is ahead of 'origin/main' by 2 commits.
   (use "git push" to publish your local commits)
 
 4.
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git switch -c week2b
+Switched to a new branch 'week2b'
+
+partB 
+
+1.
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git merge week2
+Merge made by the 'ort' strategy.
+ part1/week2.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git branch -d week2
+Deleted branch week2 (was 1285723).
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git switch -c wip
+Switched to a new branch 'wip'
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ touch wip.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git add wip.txt
+nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/git-homework-1/part1$ git commit -m "add wip.txt"
+[wip 189659c] add wip.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 part1/wip.txt
+
