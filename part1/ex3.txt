@@ -1,0 +1,93 @@
+Part A:
+1. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~$ cd /home/nguyen-hong-phi
+2. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~$ mkdir ex3
+3. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~$ cd ex3
+4. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ mkdir dir1 dir2
+5. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ touch HelloWorld.txt
+6. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ cp HelloWorld.txt dir1
+7. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ cp -i HelloWorld.txt dir1
+   cp: overwrite 'dir1/HelloWorld.txt'? y
+8. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ mv HelloWorld.txt Hi.txt
+9. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ mv Hi.txt dir2
+
+Part B:
+1. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ln dir2/Hi.txt Hi-hard
+2. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ln dir2/Hi.txt dir1/Hi-hard
+3. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ln dir2/Hi.txt dir2/Hi-hard
+4. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ln -s dir2/Hi.txt Hi-sym
+5. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ rv Hi-hard
+   rv: command not found
+6. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ rm Hi-hard
+7. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ rm dir2/Hi.txt
+8. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ls -li
+   total 8
+   2635814 drwxrwxr-x 2 nguyen-hong-phi nguyen-hong-phi 4096 Sep  4 21:05 dir1
+   2635817 drwxrwxr-x 2 nguyen-hong-phi nguyen-hong-phi 4096 Sep  5 14:45 dir2
+   2635695 lrwxrwxrwx 1 nguyen-hong-phi nguyen-hong-phi   11 Sep  4 21:06 Hi-sym -> dir2/Hi.txt
+   
+Part C:
+1. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ls /bin /usr/bin | sort | uniq | wc -l
+   2042
+2. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ls /bin /usr/bin | sort | uniq | grep "zip"
+   bunzip2
+   bzip2
+   bzip2recover
+   funzip
+   gunzip
+   gzip
+   preunzip
+   prezip
+   prezip-bin
+   streamzip
+   unzip
+   unzipsfx
+   zip
+   zipcloak
+   zipdetails
+   zipgrep
+   zipinfo
+   zipnote
+   zipsplit
+3. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ seq 1 30 > myfile.txt
+4. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ head -5 myfile.txt
+   1
+   2
+   3
+   4
+   5
+5. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ tail -5 myfile.txt
+   26
+   27
+   28
+   29
+   30
+6. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ wc myfile.txt
+   30 30 81 myfile.txt
+7. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ ls -l | tee full_listing.txt
+   total 12
+   drwxrwxr-x 2 nguyen-hong-phi nguyen-hong-phi 4096 Sep  4 21:05 dir1
+   drwxrwxr-x 2 nguyen-hong-phi nguyen-hong-phi 4096 Sep  5 14:45 dir2
+   -rw-rw-r-- 1 nguyen-hong-phi nguyen-hong-phi    0 Sep  5 15:01 full_listing.txt
+   lrwxrwxrwx 1 nguyen-hong-phi nguyen-hong-phi   11 Sep  4 21:06 Hi-sym -> dir2/Hi.txt
+   -rw-rw-r-- 1 nguyen-hong-phi nguyen-hong-phi   81 Sep  5 14:57 myfile.txt
+
+Part D:
+1. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ mkdr permissions
+   Command 'mkdr' not found, did you mean:
+     command 'mkdir' from deb coreutils (9.4-3ubuntu6.2)
+     command 'mhdr' from deb mblaze (1.1-1)
+   Try: sudo apt install <deb name>
+2. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ mkdir permissions
+3. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3$ cd permissions
+4. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3/permissions$ touch secret.txt shared.txt public.txt
+5. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3/permissions$ chmod 600 secret.txt
+6. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3/permissions$ chmod 664 shared.txt
+7. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3/permissions$ chmod 777 public.txt
+8. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3/permissions$ umask
+   0002
+9. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3/permissions$ touch newfile.txt
+10. nguyen-hong-phi@nguyen-hong-phi-HP-245-G8-Notebook-PC:~/ex3/permissions$ ls -l newfile.txt
+    -rw-rw-r-- 1 nguyen-hong-phi nguyen-hong-phi 0 Sep  5 15:12 newfile.txt
+    
+    why that new file has that permission as you saw from the ls -l command ?
+explain: Because umask Controls default permissions for newly created files.
